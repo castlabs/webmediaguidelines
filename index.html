@@ -94,7 +94,7 @@
             <p>
               Once the player has the manifest it parses it. At this point the behaviour differs between players found on the different devices depending on the transport formats. However, broadly, it behaves in the following way: <br>
 <ol>
-<li>The clinet uses DRM license URL to request a secure key to enable decoding of the media.</li>
+<li>The client uses DRM license URL to request a secure key to enable decoding of the media.</li>
   <li>The players ABR determines the bandwidth available to the client by examining the response times associated with the request for the first chunk of video, how many bytes were received in what time period. This provides enough information to determine the playback quality that the player can sustain over a proportion of the length of the asset, or in the case of live streaming a specific timeframe.</li>
 <li>Once the player has this information it can then compare this with the the metadata from the manifest that describes the different qualities that the content provider is supplying. It picks the quality level with an average bitrate that is as close to the available bitrate but within its bounds to avoid a situation where a consistent experience is interrupted as the player requires more data than the current network bandwidth can supply, where the player’s buffer is emptying faster than it is being filled.
 <li>It then requests a segment from a location on the edge server that typically relative to the location of the manifest.
